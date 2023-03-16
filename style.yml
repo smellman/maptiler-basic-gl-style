@@ -10,8 +10,17 @@ metadata:
 sources:
   openmaptiles:
     type: vector
-    url: https://api.maptiler.com/tiles/v3/tiles.json?key={key}
-glyphs: https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}
+    url: https://tile.openstreetmap.jp/data/planet.json
+  terrain:
+    type: raster-dem
+    tiles: 
+      - https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png
+    encoding: terrarium
+    tileSize: 256
+    maxzoom: 15
+    minzoom: 1
+    attribution: <a href="https://mapzen.com/tangram" target="_blank">Tangram</a> | <a href="https://mapzen.com/" target="_blank">Mapzen</a>
+glyphs: https://tile.openstreetmap.jp/fonts/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landuse-residential.yml
@@ -61,4 +70,5 @@ layers:
   - !!inc/file layers/place_label_city.yml
   - !!inc/file layers/country_label-other.yml
   - !!inc/file layers/country_label.yml
+  - !!inc/file layers/hills.yml
 id: basic
