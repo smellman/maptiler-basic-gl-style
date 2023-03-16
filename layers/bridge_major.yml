@@ -1,0 +1,30 @@
+id: bridge_major
+type: line
+source: openmaptiles
+source-layer: transportation
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '=='
+    - brunnel
+    - bridge
+  - - in
+    - class
+    - primary
+    - secondary
+    - tertiary
+    - trunk
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color: '#fff'
+  line-width:
+    base: 1.4
+    stops:
+      - - 6
+        - 0.5
+      - - 20
+        - 30

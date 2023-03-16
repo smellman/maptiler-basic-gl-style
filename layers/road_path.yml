@@ -1,0 +1,28 @@
+id: road_path
+type: line
+source: openmaptiles
+source-layer: transportation
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - in
+    - class
+    - path
+    - track
+layout:
+  line-cap: square
+  line-join: bevel
+paint:
+  line-color: hsl(0, 0%, 97%)
+  line-dasharray:
+    - 1
+    - 1
+  line-width:
+    base: 1.55
+    stops:
+      - - 4
+        - 0.25
+      - - 20
+        - 10

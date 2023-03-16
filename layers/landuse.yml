@@ -1,0 +1,12 @@
+id: landuse
+type: fill
+source: openmaptiles
+source-layer: landuse
+filter:
+  - '=='
+  - class
+  - agriculture
+layout:
+  visibility: visible
+paint:
+  fill-color: '#eae0d0'

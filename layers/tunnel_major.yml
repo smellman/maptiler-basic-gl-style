@@ -1,0 +1,33 @@
+id: tunnel_major
+type: line
+source: openmaptiles
+source-layer: transportation
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '=='
+    - brunnel
+    - tunnel
+  - - in
+    - class
+    - primary
+    - secondary
+    - tertiary
+    - trunk
+layout:
+  line-cap: butt
+  line-join: miter
+paint:
+  line-color: '#fff'
+  line-dasharray:
+    - 0.28
+    - 0.14
+  line-width:
+    base: 1.4
+    stops:
+      - - 6
+        - 0.5
+      - - 20
+        - 30

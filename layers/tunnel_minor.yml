@@ -1,0 +1,30 @@
+id: tunnel_minor
+type: line
+source: openmaptiles
+source-layer: transportation
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '=='
+    - brunnel
+    - tunnel
+  - - '=='
+    - class
+    - minor_road
+layout:
+  line-cap: butt
+  line-join: miter
+paint:
+  line-color: '#efefef'
+  line-dasharray:
+    - 0.36
+    - 0.18
+  line-width:
+    base: 1.55
+    stops:
+      - - 4
+        - 0.25
+      - - 20
+        - 30

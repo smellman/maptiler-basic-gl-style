@@ -1,0 +1,27 @@
+id: bridge_minor
+type: line
+source: openmaptiles
+source-layer: transportation
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '=='
+    - brunnel
+    - bridge
+  - - '=='
+    - class
+    - minor_road
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color: '#efefef'
+  line-width:
+    base: 1.55
+    stops:
+      - - 4
+        - 0.25
+      - - 20
+        - 30

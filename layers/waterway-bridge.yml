@@ -1,0 +1,24 @@
+id: waterway-bridge
+type: line
+source: openmaptiles
+source-layer: waterway
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '=='
+    - brunnel
+    - bridge
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color: hsl(205, 56%, 73%)
+  line-width:
+    base: 1.55
+    stops:
+      - - 4
+        - 0.25
+      - - 20
+        - 30

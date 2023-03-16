@@ -1,0 +1,32 @@
+id: country_label-other
+type: symbol
+source: openmaptiles
+source-layer: place
+maxzoom: 12
+filter:
+  - all
+  - - '=='
+    - $type
+    - Point
+  - - '=='
+    - class
+    - country
+  - - '!has'
+    - iso_a2
+layout:
+  text-field: '{name:latin}'
+  text-font:
+    - Noto Sans Regular
+  text-max-width: 10
+  text-size:
+    stops:
+      - - 3
+        - 12
+      - - 8
+        - 22
+  visibility: visible
+paint:
+  text-color: hsl(0, 0%, 13%)
+  text-halo-blur: 0
+  text-halo-color: rgba(255,255,255,0.75)
+  text-halo-width: 2

@@ -1,0 +1,17 @@
+id: landcover_wood
+type: fill
+source: openmaptiles
+source-layer: landcover
+filter:
+  - '=='
+  - class
+  - wood
+paint:
+  fill-color: hsl(82, 46%, 72%)
+  fill-opacity:
+    base: 1
+    stops:
+      - - 8
+        - 0.6
+      - - 22
+        - 1

@@ -1,0 +1,28 @@
+id: airport-label
+type: symbol
+source: openmaptiles
+source-layer: aerodrome_label
+minzoom: 10
+filter:
+  - all
+  - - has
+    - iata
+layout:
+  icon-size: 1
+  text-anchor: top
+  text-field: |-
+    {name:latin}
+    {name:nonlatin}
+  text-font:
+    - Noto Sans Regular
+  text-max-width: 8
+  text-offset:
+    - 0
+    - 0.5
+  text-size: 11
+  visibility: visible
+paint:
+  text-color: '#666'
+  text-halo-blur: 1
+  text-halo-color: rgba(255,255,255,0.75)
+  text-halo-width: 1

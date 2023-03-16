@@ -1,0 +1,31 @@
+id: waterway_intermittent
+type: line
+source: openmaptiles
+source-layer: waterway
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '!in'
+    - brunnel
+    - tunnel
+    - bridge
+  - - '=='
+    - intermittent
+    - 1
+layout:
+  visibility: visible
+paint:
+  line-color: hsl(205, 56%, 73%)
+  line-dasharray:
+    - 2
+    - 1
+  line-opacity: 1
+  line-width:
+    base: 1.4
+    stops:
+      - - 8
+        - 1
+      - - 20
+        - 8

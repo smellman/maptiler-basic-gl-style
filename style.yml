@@ -1,0 +1,64 @@
+version: 8
+name: Basic
+metadata:
+  mapbox:autocomposite: false
+  mapbox:type: template
+  maputnik:renderer: mbgljs
+  openmaptiles:version: 3.x
+  openmaptiles:mapbox:owner: openmaptiles
+  openmaptiles:mapbox:source:url: mapbox://openmaptiles.4qljc88t
+sources:
+  openmaptiles:
+    type: vector
+    url: https://api.maptiler.com/tiles/v3/tiles.json?key={key}
+glyphs: https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}
+layers:
+  - !!inc/file layers/background.yml
+  - !!inc/file layers/landuse-residential.yml
+  - !!inc/file layers/landcover_grass.yml
+  - !!inc/file layers/landcover_wood.yml
+  - !!inc/file layers/water.yml
+  - !!inc/file layers/water_intermittent.yml
+  - !!inc/file layers/landcover-ice-shelf.yml
+  - !!inc/file layers/landcover-glacier.yml
+  - !!inc/file layers/landcover_sand.yml
+  - !!inc/file layers/landuse.yml
+  - !!inc/file layers/landuse_overlay_national_park.yml
+  - !!inc/file layers/waterway-tunnel.yml
+  - !!inc/file layers/waterway.yml
+  - !!inc/file layers/waterway_intermittent.yml
+  - !!inc/file layers/tunnel_railway_transit.yml
+  - !!inc/file layers/building.yml
+  - !!inc/file layers/housenumber.yml
+  - !!inc/file layers/road_area_pier.yml
+  - !!inc/file layers/road_pier.yml
+  - !!inc/file layers/road_bridge_area.yml
+  - !!inc/file layers/road_path.yml
+  - !!inc/file layers/road_minor.yml
+  - !!inc/file layers/tunnel_minor.yml
+  - !!inc/file layers/tunnel_major.yml
+  - !!inc/file layers/aeroway-area.yml
+  - !!inc/file layers/aeroway-taxiway.yml
+  - !!inc/file layers/aeroway-runway.yml
+  - !!inc/file layers/road_trunk_primary.yml
+  - !!inc/file layers/road_secondary_tertiary.yml
+  - !!inc/file layers/road_major_motorway.yml
+  - !!inc/file layers/railway-transit.yml
+  - !!inc/file layers/railway.yml
+  - !!inc/file layers/waterway-bridge-case.yml
+  - !!inc/file layers/waterway-bridge.yml
+  - !!inc/file layers/bridge_minor case.yml
+  - !!inc/file layers/bridge_major case.yml
+  - !!inc/file layers/bridge_minor.yml
+  - !!inc/file layers/bridge_major.yml
+  - !!inc/file layers/admin_sub.yml
+  - !!inc/file layers/admin_country_z0-4.yml
+  - !!inc/file layers/admin_country_z5-.yml
+  - !!inc/file layers/poi_label.yml
+  - !!inc/file layers/airport-label.yml
+  - !!inc/file layers/road_major_label.yml
+  - !!inc/file layers/place_label_other.yml
+  - !!inc/file layers/place_label_city.yml
+  - !!inc/file layers/country_label-other.yml
+  - !!inc/file layers/country_label.yml
+id: basic

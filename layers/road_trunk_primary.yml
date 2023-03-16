@@ -1,0 +1,25 @@
+id: road_trunk_primary
+type: line
+source: openmaptiles
+source-layer: transportation
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - in
+    - class
+    - trunk
+    - primary
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color: '#fff'
+  line-width:
+    base: 1.4
+    stops:
+      - - 6
+        - 0.5
+      - - 20
+        - 30

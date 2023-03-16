@@ -1,0 +1,4 @@
+id: background
+type: background
+paint:
+  background-color: hsl(47, 26%, 88%)

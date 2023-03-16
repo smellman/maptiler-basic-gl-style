@@ -1,0 +1,19 @@
+id: landcover-glacier
+type: fill
+source: openmaptiles
+source-layer: landcover
+filter:
+  - '=='
+  - subclass
+  - glacier
+layout:
+  visibility: visible
+paint:
+  fill-color: hsl(47, 22%, 94%)
+  fill-opacity:
+    base: 1
+    stops:
+      - - 0
+        - 1
+      - - 8
+        - 0.5

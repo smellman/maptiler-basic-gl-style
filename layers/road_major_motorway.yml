@@ -1,0 +1,25 @@
+id: road_major_motorway
+type: line
+source: openmaptiles
+source-layer: transportation
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '=='
+    - class
+    - motorway
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color: hsl(0, 0%, 100%)
+  line-offset: 0
+  line-width:
+    base: 1.4
+    stops:
+      - - 8
+        - 1
+      - - 16
+        - 10

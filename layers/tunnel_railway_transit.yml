@@ -1,0 +1,31 @@
+id: tunnel_railway_transit
+type: line
+source: openmaptiles
+source-layer: transportation
+minzoom: 0
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '=='
+    - brunnel
+    - tunnel
+  - - '=='
+    - class
+    - transit
+layout:
+  line-cap: butt
+  line-join: miter
+paint:
+  line-color: hsl(34, 12%, 66%)
+  line-dasharray:
+    - 3
+    - 3
+  line-opacity:
+    base: 1
+    stops:
+      - - 11
+        - 0
+      - - 16
+        - 1

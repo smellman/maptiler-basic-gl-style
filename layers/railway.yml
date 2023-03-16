@@ -1,0 +1,19 @@
+id: railway
+type: line
+source: openmaptiles
+source-layer: transportation
+filter:
+  - '=='
+  - class
+  - rail
+layout:
+  visibility: visible
+paint:
+  line-color: hsl(34, 12%, 66%)
+  line-opacity:
+    base: 1
+    stops:
+      - - 11
+        - 0
+      - - 16
+        - 1
